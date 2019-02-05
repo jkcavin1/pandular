@@ -1,0 +1,33 @@
+﻿<div id="panel-output">
+    <div id="main">
+        <div id="ld">
+            <img id="logo" src="logo.png" alt="[logo]">
+            <span id="ldtext">Uh, you have JavaScript disabled. This application won't work.</span>
+            <div id="ldbar-outer">
+                <div id="ldbar"></div>
+            </div>
+        </div>
+        <canvas id="canvas" style="display:none;" oncontextmenu="event.preventDefault()"></canvas>
+    </div>
+</div>
+<div id="header">
+    <button id="fullscreen-button" onclick="Module.requestFullScreen(false, false)" disabled><i class="fa fa-arrows-alt" aria-hidden="true"></i> Fullscreen</button>
+    <div id="toolbar">
+        <button id="play-button" onclick="runCode()" disabled><i class="fa fa-play" aria-hidden="true"></i> Run Code</button>
+        <button id="stop-button" onclick="stopCode()" disabled><i class="fa fa-stop" aria-hidden="true"></i> Stop</button>
+        <div class="dropdown">
+            <button>Load sample... <i class="fa fa-chevron-down"></i></button>
+            <div class="dropdown-content">
+                <button onclick="loadSample(0)">hello_world.py</button>
+                <button onclick="loadSample(1)">pystone.py</button>
+                <button onclick="loadSample(2)">asteroids.py</button>
+                <button onclick="loadSample(3)">music_box.py</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="panel-input">
+    <pre id="editor"></pre>
+</div>
+<div id="console" class="ace_editor ace-monokai ace_scroller"></div>
+<script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>

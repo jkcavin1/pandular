@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>< <html lang="en" ng-app="myApp" class="no-js">!--> <!--<![endif]-->
+<head>
+    <base href="" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        asmConfig = {
+            'canvasId': 'canvas',
+            'loadStatusId': 'ldtext',
+            'EMSCRIPTEN_ASM_URL': 'panda-engine/panda-engine27.js',
+            'ASM_SIZE': 25355747, // The uncompressed size of that resource (in bytes).
+            'logLevel': 'none'
+        };
+    </script>
+    <!--<link rel="prefetch" href="panda-engine/panda-engine27.js" type="text/javascript" />
+    <link rel="prefetch" href="panda-engine/panda-engine27.js.mem" />
+    <link rel="prefetch" href="panda-engine/panda-engine27.data" type="application/json" />-->
+    <!--for script tags in templates (cross compatible?)
+        https://stackoverflow.com/questions/21336350/in-angularjs-any-inline-javascript-code-that-included-in-html-templates-doesnt
+        -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="code-editor/code-editor.module.js" type="text/javascript"></script><!--MODULES MUST BE FIRST before components etc-->
+    <script src="code-editor/code-editor.component.js" type="text/javascript"></script>
+    <script src="panda-canvas/panda-canvas.module.js" type="text/javascript"></script>
+    <script src="panda-canvas/panda-canvas.component.js" type="text/javascript"></script>
+</head>
+<body ng-app="pandaApp">
+    <div ng-view></div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+﻿
+# angular js
+logs/*
+!.gitkeep
+node_modules/
+/app/lib/*
+/app/ace/*
+tmp
+.DS_Store
+.idea
